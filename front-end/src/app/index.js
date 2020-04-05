@@ -153,6 +153,10 @@ class UI {
     const field = document.createElement("div");
     field.classList.add("mt-2");
     field.classList.add("task");
+    field.classList.add('fadeInDown')
+    // field.classList.add('fadeIn')
+    field.classList.add('animated')
+
 
     // let number = await API.getCounter();
 
@@ -186,6 +190,9 @@ class UI {
     const field = document.createElement("div");
     field.classList.add("mt-2");
     field.classList.add("task");
+    field.classList.add('fadeInUp')
+    // field.classList.add('fadeIn')
+    field.classList.add('animated')
 
     field.id = task._id;
 
@@ -220,7 +227,14 @@ class UI {
       const parent = el.parentElement.parentElement.parentElement;
       console.log(parent.id);
       //  Store.removeTask(parent.id);
+      // field.classList.add('fadeInDown')
+      // field.classList.add('fadeIn')
+
+  
       API.deleteTaskbyID(parent.id);
+      
+      // setTimeout(() =>  parent.remove(), 2000);
+
       parent.remove();
 
       // localStorage.setItem("", --n);
